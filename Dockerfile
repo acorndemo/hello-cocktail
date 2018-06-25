@@ -1,6 +1,6 @@
 FROM golang:latest 
+RUN mkdir /app 
 WORKDIR /app
-# RUN mkdir /app 
-COPY ./main /app/ 
-# RUN go build -o main . 
+RUN go build -o main . 
+#COPY ./repo/main /app/ 
 CMD ["/app/main"]
